@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صدقة جارية | الحاجة أم وجيه</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --dark: #0f0f0f;
+      --light: #f9f6ef;
+    }body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: var(--light);
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-family: 'Amiri', serif;
+  font-size: 2.4rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.card {
+  max-width: 420px;
+  margin: 30px auto;
+  background: linear-gradient(180deg, #1c1c1c, #0b0b0b);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(212,175,55,0.15);
+}
+
+.image-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 20px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 20px rgba(212,175,55,0.4);
+}
+
+.dua {
+  text-align: center;
+  font-family: 'Amiri', serif;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #f1e7c6;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  font-family: 'Amiri', serif;
+  font-size: 1.1rem;
+  padding: 14px 10px;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: linear-gradient(145deg, #2a2a2a, #0f0f0f);
+  color: var(--gold);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 18px rgba(212,175,55,0.5);
+}
+
+.counter {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #e6d8a8;
+}
+
+.benefits {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  background: rgba(212,175,55,0.05);
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px dashed rgba(212,175,55,0.3);
+}
+
+footer {
+  text-align: center;
+  margin: 40px 10px 20px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+footer span {
+  color: var(--gold);
+}
+
+  </style>
+</head>
+<body>  <header>
+    <h1>صدقة جارية</h1>
+    <p>عن المرحومة بإذن الله<br><strong>الحاجة أم وجيه</strong></p>
+  </header>  <section class="card">
+    <div class="image-box">
+      <!-- ضع صورة ستي هنا وسمّيها image.jpg -->
+      <img src="image.jpg" alt="الحاجة أم وجيه" />
+    </div><div class="dua">
+  اللهم اغفر لها، وارحمها، ونور قبرها، واجعل هذا العمل في ميزان حسناتها 🤍
+</div>
+
+<div class="buttons">
+  <button onclick="zikr('subhan')">سبحان الله</button>
+  <button onclick="zikr('hamd')">الحمد لله</button>
+  <button onclick="zikr('tahlil')">لا إله إلا الله</button>
+  <button onclick="zikr('takbir')">الله أكبر</button>
+  <button style="grid-column: span 2" onclick="zikr('hawqala')">لا حول ولا قوة إلا بالله</button>
+</div>
+
+<div class="counter" id="counter">مجموع التسبيحات: 0</div>
+
+<div class="benefits">
+  <strong>أعمال ينتفع بها:</strong><br>
+  • قراءة الفاتحة وإهداء الثواب.<br>
+  • الإكثار من الذكر بنية الصدقة الجارية.<br>
+  • الدعاء لكل من فقدنا.<br>
+  • تذكير النفس بالآخرة والعمل الصالح.
+</div>
+
+  </section>  <footer>
+    <div>Design by <span>Mohamed Abdelhalim</span></div>
+    <div>May Allah accept this ongoing charity 🤲</div>
+  </footer>  <script>
+    let total = 0;
+
+    function zikr(type) {
+      total++;
+      document.getElementById('counter').innerText = 'مجموع التسبيحات: ' + total;
+    }
+  </script></body>
+</html>
